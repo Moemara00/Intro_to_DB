@@ -5,6 +5,8 @@ my_curssor = mydb.cursor()
 try :
     my_curssor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
     print("Database 'alx_book_store' created successfully!")
-except :
-    print(mysql.connector.DatabaseError)
+
+except mysql.connector.Error as e:
+    print(e) 
+    
 
