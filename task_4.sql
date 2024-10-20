@@ -1,6 +1,7 @@
 USE alx_book_store
 
-CREATE TABLE Books(
+
+Books(
 book_id PRIMARY KEY
 title VARCHAR (130)
 author_id (Foreign Key referencing Authors table)
