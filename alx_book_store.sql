@@ -24,14 +24,14 @@ email VARCHAR(215)
 address TEXT
 )
 CREATE TABLE Orders(
-order_id PRIMARY KEY
-customer_id (Foreign Key referencing Customers table)
+order_id INT PRIMARY KEY
+customer_id INT FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 order_date DATE
 )
 CREATE TABLE Order_Details(
 orderdetailid  PRIMARY KEY
-order_id (Foreign Key referencing Orders table)
-book_id (Foreign Key referencing Books table)
+order_id INT (Foreign Key (order_id) REFERENCES Orders (order_id))
+book_id INT (Foreign Key (book_id) REFERENCES Books (book_id))
 quantity DOUBLE
 )
 
