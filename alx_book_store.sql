@@ -30,8 +30,8 @@ order_date DATE
 )
 CREATE TABLE Order_Details(
 orderdetailid  PRIMARY KEY
-order_id INT (Foreign Key (order_id) REFERENCES Orders (order_id))
-book_id INT (Foreign Key (book_id) REFERENCES Books (book_id))
+order_id INT FOREIGN KEY (order_id) REFERENCES Orders (order_id)
+book_id INT FOREIGN KEY (book_id) REFERENCES Books (book_id)
 quantity DOUBLE
 )
 
