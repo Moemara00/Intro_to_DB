@@ -29,9 +29,9 @@ customer_id INT FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 order_date DATE
 )
 CREATE TABLE Order_Details(
-orderdetailid  PRIMARY KEY
-order_id  FOREIGN KEY (order_id) REFERENCES Orders (order_id)
-book_id  FOREIGN KEY (book_id) REFERENCES Books (book_id)
+orderdetailid  PRIMARY Key
+order_id FOREIGN KEY (order_id) REFERENCES Orders(order_id)
+book_id INT FOREIGN KEY (book_id) REFERENCES Books (book_id)
 quantity DOUBLE
 )
 
